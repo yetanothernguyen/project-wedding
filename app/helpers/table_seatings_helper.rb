@@ -1,0 +1,2 @@
+module TableSeatingsHelper
+end
