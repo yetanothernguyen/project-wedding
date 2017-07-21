@@ -43,7 +43,7 @@ end
 
 group :staging, :production do
   gem 'pg'
-  gem 'therubyracer', platforms: :ruby
+  gem 'therubyracer', '~> 0.12.3', platforms: :ruby
 end
 
 group :development do
