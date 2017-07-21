@@ -1,24 +1,17 @@
-# README
+## Requirements
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby 2.4.1
+* SQLite
 
-Things you may want to cover:
+## Development Setup
 
-* Ruby version
+### Install dependencies
+```
+$ bundle install
+```
 
-* System dependencies
+### Start server
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rails s
+```
