@@ -51,7 +51,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'capistrano'
-  gem 'capistrano-rvm'
+  gem 'capistrano-rbenv'
   gem 'capistrano-rails'
   gem 'capistrano-gitflow', git: 'https://github.com/kfit-dev/capistrano-gitflow.git'
   gem 'capistrano-faster-assets', '~> 1.0'
