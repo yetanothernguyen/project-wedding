@@ -12,5 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require jquery.turbolinks
+//= require handlebars
 //= require tabletop
 //= require_tree .

@@ -1,0 +1,8 @@
+<%= form_tag guestbook_path do %>
+  <%= label_tag "Name" %>
+  <%= text_field_tag :name %>
+  <%= label_tag "Message" %>
+  <%= text_area_tag :message %>
+
+  <%= submit_tag "Submit "%>
+<% end %>

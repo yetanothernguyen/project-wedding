@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'guestbook/index'
+  resource :guestbook, only: [:show, :create]
 
   root 'home#index'
 end

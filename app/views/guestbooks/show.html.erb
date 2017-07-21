@@ -1,0 +1,32 @@
+<h1>Guestbook</h1>
+
+<%= render "form" %>
+
+<br />
+
+<div id="content"></div>
+
+<script id="guestentry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <div>{{Message}}</div>
+    <div>{{Name}}</div>
+  </div>
+</script>
+
+<script>
+  $(document).ready(function() {
+    Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1-j3vsvW1pcukJf5EkeYNdc52K5suqNT5nlmR4qPRe5s/pubhtml',
+                    callback: showInfo,
+                    simpleSheet: true } );
+  });
+
+  function showInfo(data, tabletop) {
+    var source   = $("#guestentry-template").html();
+    var template = Handlebars.compile(source);
+
+    $.each(data, function(index, entry) {
+      var html = template(entry);
+      $("#content").append(html);
+    });
+  }
+</script>
