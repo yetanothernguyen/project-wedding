@@ -1,3 +1,20 @@
 // Place all the styles related to the Timelines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.timeline {
+  position: relative;
+
+  &:after {
+    border-left: 1px solid #9eebcf;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 28px;
+    bottom: 0;
+    width: 1px;
+    height: auto;
+    z-index: -1;
+  }
+}
