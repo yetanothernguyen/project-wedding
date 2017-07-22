@@ -33,7 +33,7 @@
     <% @entries.each do |entry| %>
       <div class="card entry">
         <div class="message"><%= entry.message %></div>
-        <div class="name"><%= entry.name %></div>
+        <div class="name"><%= entry.first_name %> <%= entry.last_name %></div>
       </div>
     <% end %>
   </div>

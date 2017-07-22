@@ -1,6 +1,9 @@
 <%= form_tag guestbook_path do %>
-  <%= label_tag "Name", nil, :class => "db f6" %>
-  <%= text_field_tag :name, nil, :class => "input", :placeholder => "Peter Parker" %>
+  <%= label_tag "First Name", nil, :class => "db f6" %>
+  <%= text_field_tag :first_name, nil, :class => "input", :placeholder => "Peter" %>
+
+  <%= label_tag "Last Name", nil, :class => "db f6" %>
+  <%= text_field_tag :last_name, nil, :class => "input", :placeholder => "Parker" %>
 
   <%= label_tag "Message", nil, :class => "db f6" %>
   <%= text_area_tag :message, nil, :class => "input textarea", :placeholder => "Your message goes here..." %>

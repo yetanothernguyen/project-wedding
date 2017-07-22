@@ -4,7 +4,7 @@ class GuestbooksController < ApplicationController
   end
 
   def create
-    GuestbookEntry.create(params[:name], params[:message])
+    GuestbookEntry.create(params[:first_name], params[:last_name], params[:message])
 
     redirect_to guestbook_path
   end
