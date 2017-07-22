@@ -1,3 +1,22 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav-link {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: .5em 1em;
+  height: 96px;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  transition: .1s all ease-in-out;
+
+  &:hover {
+    background: white;
+    color: #222;
+  }
+}

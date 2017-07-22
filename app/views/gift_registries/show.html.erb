@@ -1,2 +1,69 @@
-<h1>GiftRegistries#show</h1>
-<p>Find me in app/views/gift_registries/show.html.erb</p>
+<div class="vh-100-ns mw6 center flex justify-center">
+  <div class="self-center">
+    <h2 class="georgia sans-serif mv4 f1 f-subheadline-ns normal lh-title">Gift Registry</h2>
+
+    <p class="f6 f5-ns lh-copy">
+      “假如你想快樂—個小時，就去睡個午覺；一整天，就去釣魚；一個月，就去結婚；一整年，繼承一筆遺產；一輩子，去幫助別人。”
+    </p>
+
+    <p class="f6 f5-ns lh-copy">
+      As the Chinese proverb goes, “If you want happiness for an hour — take a nap. If you want happiness for a day — go fishing. If you want happiness for a month — get married. If you want happiness for a year — inherit a fortune. If you want happiness for a lifetime — help someone else.”
+    </p>
+
+
+
+    <div class="tc dn db-ns">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32" fill="none" stroke="currentcolor" stroke-width="1" style="display: inline-block; vertical-align: middle; overflow: visible; margin: 16px;">
+        <path d="M1.0606601717798212 5 L8 11.939339828220179 L14.939339828220179 5"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+
+<div class="mw6 center pv5 mt5 bt b--white-20">
+  <p class="f6 f5-ns lh-copy">
+    By being part of this journey that’s bigger than the both of us, that in itself is a gift that we both feel deeply grateful for.
+  </p>
+
+  <p class="f6 f5-ns lh-copy">
+    Had we opted for a traditional wedding and your kind self intended on bringing an ang pow (red packet) or gift, we would instead like to invite you to choose from our gift registry of charities.
+  </p>
+
+  <p class="f6 f5-ns lh-copy">
+    Together, lets create a lifetime of happiness!
+  </p>
+
+  <div class="ba b--white-30 br1 pa4 mt5">
+    <h4 class="mt2 mb4 bb pb3">Wedding Gift Options</h4>
+    <div class="mb3">
+      <label class="db f5 b mb2">Option 1</label>
+      <%= link_to root_path, class: "button" do %>
+        <div class="dt dt--fixed w-100">
+          <p class="f6 f5-ns pv2 lh-copy dtc w-80 w-90-ns">
+            If you would like to begift Khailee and Elisa by directly supporting one (or more) of their causes.
+          </p>
+
+          <div class="dtc v-mid w-20 w-10-ns tc">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="none" stroke="currentcolor" stroke-width="1" style="display: inline-block; vertical-align: middle; overflow: visible; margin: 16px;"><path d="M5 1.0606601717798212 L11.939339828220179 8 L5 14.939339828220179"></path></svg>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div>
+      <label class="db f5 b mb2">Option 2</label>
+      <%= link_to root_path, class: "button" do %>
+        <div class="dt dt--fixed w-100">
+          <p class="f6 f5-ns pv2 lh-copy dtc w-80 w-90-ns">
+            If you would like to begift Khailee and Elisa by entrusting them to donate towards causes in the future, please click here.
+          </p>
+
+          <div class="dtc v-mid w-20 w-10-ns tc">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="none" stroke="currentcolor" stroke-width="1" style="display: inline-block; vertical-align: middle; overflow: visible; margin: 16px;"><path d="M5 1.0606601717798212 L11.939339828220179 8 L5 14.939339828220179"></path></svg>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
