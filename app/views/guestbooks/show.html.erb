@@ -29,30 +29,12 @@
 
 <div class="mw6 center pv5 mt5 bt b--white-20">
   <%= render "form" %>
-  <div id="content" class="mv5"></div>
+  <div id="content" class="mv5">
+    <% @entries.each do |entry| %>
+      <div class="card entry">
+        <div class="message"><%= entry.message %></div>
+        <div class="name"><%= entry.name %></div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<script id="guestentry-template" type="text/x-handlebars-template">
-    <div class="card entry">
-      <div class="message">{{Message}}</div>
-      <div class="name">{{Name}}</div>
-    </div>
-</script>
-
-<script>
-  $(document).ready(function() {
-    Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1-j3vsvW1pcukJf5EkeYNdc52K5suqNT5nlmR4qPRe5s/pubhtml',
-                    callback: showInfo,
-                    simpleSheet: true } );
-  });
-
-  function showInfo(data, tabletop) {
-    var source   = $("#guestentry-template").html();
-    var template = Handlebars.compile(source);
-
-    $.each(data, function(index, entry) {
-      var html = template(entry);
-      $("#content").append(html);
-    });
-  }
-</script>
