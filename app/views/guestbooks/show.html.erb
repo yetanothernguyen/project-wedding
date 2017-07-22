@@ -1,16 +1,42 @@
-<h1>Guestbook</h1>
+<div class="vh-100-ns mw6 center flex justify-center">
+  <div class="self-center">
+    <h2 class="georgia sans-serif mv4 f1 f-subheadline-ns normal lh-title">Guestbook</h2>
 
-<%= render "form" %>
+    <p class="f6 f5-ns lh-copy">
+      Khailee and Elisa would like to invite you to sign their guest book!
+    </p>
 
-<br />
+    <p class="f6 f5-ns lh-copy">
+      Even the greatest of writers experience writer’s block, here are some ideas to that get that typing going!
+    </p>
 
-<div id="content"></div>
+    <p class="f6 f5-ns lh-copy">
+      Share old memories, recent memories, your thoughts on the bride, thoughts on the groom, your thoughts on their communion, is there a cause that they should look into, is their cloud wedding concept a little whack… or perhaps, is this something that you’d like to do for your wedding too?
+    </p>
+
+    <p class="f6 f5-ns lh-copy">
+      <i>Shakespeare away!</i>
+    </p>
+
+    <div class="tc dn db-ns">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32" fill="none" stroke="currentcolor" stroke-width="1" style="display: inline-block; vertical-align: middle; overflow: visible; margin: 16px;">
+        <path d="M1.0606601717798212 5 L8 11.939339828220179 L14.939339828220179 5"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+
+<div class="mw6 center pv5 bt b--white-20">
+  <%= render "form" %>
+  <div id="content" class="mv5"></div>
+</div>
 
 <script id="guestentry-template" type="text/x-handlebars-template">
-  <div class="entry">
-    <div>{{Message}}</div>
-    <div>{{Name}}</div>
-  </div>
+    <div class="card entry">
+      <div class="message">{{Message}}</div>
+      <div class="name">{{Name}}</div>
+    </div>
 </script>
 
 <script>

@@ -1,3 +1,83 @@
 // Place all the styles related to the Guestbook controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.input {
+  background-color: transparent;
+  color: white;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  border-left: none;
+  margin-bottom: 2em;
+  outline: none;
+  padding: .5em 0;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, .4);
+  }
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.button {
+  border: 1px solid white;
+  border-radius: 2px;
+  background: none;
+  color: white;
+  padding: .5em 1em;
+  transition: .2s all ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background: white;
+    color: #222;
+  }
+}
+
+.card {
+  background-color: #2295f9;
+  border-radius: 4px;
+  font-size: .825em;
+  line-height: 1.3;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  max-width: 24em;
+  float: left;
+  clear: both;
+  transform: rotate(1deg);
+
+  &:nth-of-type(2n) {
+    background-color: rgba(255, 255, 255, 1);
+    color: #222;
+    float: right;
+    transform: rotate(-1deg);
+
+    & > .message {
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+  }
+}
+
+.message {
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.rotate-l {
+  transform: rotate(-1deg);
+  // transform-origin: 0;
+}
+
+.rotate-r {
+  transform: rotate(1deg);
+  // transform-origin: 0;
+}
