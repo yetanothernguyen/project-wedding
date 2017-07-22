@@ -1,13 +1,15 @@
-<div class="vh-50 vh-100-ns mw6 center flex justify-center">
+<div class="vh-100-ns mw6 center flex justify-center">
   <div class="self-center">
     <h2 class="georgia sans-serif mv4 f1 f-subheadline-ns normal lh-title">Guestbook</h2>
 
     <p class="f6 f5-ns lh-copy">
       Khailee and Elisa would like to invite you to sign their guest book!
     </p>
+
     <p class="f6 f5-ns lh-copy">
       Even the greatest of writers experience writer’s block, here are some ideas to that get that typing going!
     </p>
+
     <p class="f6 f5-ns lh-copy">
       Share old memories, recent memories, your thoughts on the bride, thoughts on the groom, your thoughts on their communion, is there a cause that they should look into, is their cloud wedding concept a little whack… or perhaps, is this something that you’d like to do for your wedding too?
     </p>
@@ -16,7 +18,7 @@
       <i>Shakespeare away!</i>
     </p>
 
-    <div class="tc">
+    <div class="tc dn db-ns">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32" fill="none" stroke="currentcolor" stroke-width="1" style="display: inline-block; vertical-align: middle; overflow: visible; margin: 16px;">
         <path d="M1.0606601717798212 5 L8 11.939339828220179 L14.939339828220179 5"></path>
       </svg>
@@ -27,15 +29,49 @@
 
 <div class="mw6 center pv5 bt b--white-20">
   <%= render "form" %>
+  <!-- <div id="content" class="mt5"></div> -->
+  <div class="mt5">
+    <div class="cf">
+      <div class="card bg-blue rotate-r">
+        <div class="message">
+          Wishing you a lifetime of love and happiness.
+        </div>
+        <div class="name">Andy Ngo</div>
+      </div>
+    </div>
 
-  <div id="content"></div>
+    <div class="cf">
+      <div class="fr card bg-white near-black rotate-l">
+        <div class="message">
+          Thank you for letting us/me share in this joyful day. We/I wish you all the best as you embark on this wonderful union.
+        </div>
+        <div class="name">Mark</div>
+      </div>
+    </div>
+
+    <div class="cf">
+      <div class="card bg-blue rotate-r">
+        <div class="message">
+          Best wishes on this wonderful journey, as you build your new lives together.
+        </div>
+        <div class="name">Nguyen</div>
+      </div>
+    </div>
+  </div>
 </div>
-
 
 <script id="guestentry-template" type="text/x-handlebars-template">
   <div class="entry">
-    <div>{{Message}}</div>
-    <div>{{Name}}</div>
+    <div class="cf">
+      <div class="fl">
+        <div class="cf">
+          <div class="fl mr3 w2 h2 bg-white"></div>
+          <div class="fr bubble-left wechat">
+            {{Message}}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </script>
 
