@@ -16,4 +16,5 @@
 //= require jquery.turbolinks
 //= require handlebars
 //= require tabletop
+//= require awesomplete
 //= require_tree .

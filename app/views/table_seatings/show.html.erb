@@ -1,2 +1,37 @@
-<h1>TableSeatings#show</h1>
-<p>Find me in app/views/table_seatings/show.html.erb</p>
+<input id="guest-list-search" />
+
+<div id="table-guest-list-container">
+  <ol id="table-guest-list">
+  </ol>
+</div>
+
+<div id="guest-list-container">
+  <ul id="guest-list">
+    <% @guests.each do |guest| %>
+      <li><%= guest.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+<script>
+  var guests = <%= raw @guest_tables.to_json %>;
+  var guest_by_table = <%= raw @guests_by_table.to_json %>;
+
+  $(function() {
+    var input = document.getElementById('guest-list-search');
+    new Awesomplete(input, {list: "#guest-list"});
+
+    input.addEventListener("awesomplete-selectcomplete", function(event) {
+      $("#guest-list-container").hide();
+
+      var name = event.text.value;
+      var table = guests[name];
+      var table_guests = guest_by_table[table];
+
+      $("#table-guest-list").html("");
+      table_guests.forEach(function(guest) {
+        $("#table-guest-list").append("<li>" + guest.name + "</li>");
+      });
+    });
+  });
+</script>

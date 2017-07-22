@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'google_drive', '~> 2.1.5'
 gem 'jquery-turbolinks'
+gem 'virtus', '~> 1.0.5'
+gem 'config'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -69,4 +71,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tabletop'
   gem 'rails-assets-handlebars'
   gem 'rails-assets-jquery'
+  gem 'rails-assets-awesomplete'
 end
