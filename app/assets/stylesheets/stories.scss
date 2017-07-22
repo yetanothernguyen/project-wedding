@@ -36,6 +36,27 @@
     width: 20px;
     height: 40px;
   }
+
+  &.wechat {
+    border-radius: 4px;
+    color: #222;
+
+    &:before {
+      background-color: transparent;
+      border-radius: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 8px 7px 0;
+      border-color: transparent #e5e5ea transparent transparent;
+      top: 10px;
+      left: -8px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
 }
 
 .bubble-right {
@@ -72,4 +93,29 @@
     width: 20px;
     height: 40px;
   }
+
+  &.wechat {
+    background-color: #abe35a;
+    border-radius: 4px;
+    color: #222;
+
+    &:before {
+      background-color: transparent;
+      border-radius: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 0 7px 8px;
+      border-color: transparent transparent transparent #abe35a;
+      top: 10px;
+      right: -8px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.avatar {
 }
