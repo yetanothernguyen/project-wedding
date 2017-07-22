@@ -29,50 +29,14 @@
 
 <div class="mw6 center pv5 bt b--white-20">
   <%= render "form" %>
-  <!-- <div id="content" class="mt5"></div> -->
-  <div class="mt5">
-    <div class="cf">
-      <div class="card bg-blue rotate-r">
-        <div class="message">
-          Wishing you a lifetime of love and happiness.
-        </div>
-        <div class="name">Andy Ngo</div>
-      </div>
-    </div>
-
-    <div class="cf">
-      <div class="fr card bg-white near-black rotate-l">
-        <div class="message">
-          Thank you for letting us/me share in this joyful day. We/I wish you all the best as you embark on this wonderful union.
-        </div>
-        <div class="name">Mark</div>
-      </div>
-    </div>
-
-    <div class="cf">
-      <div class="card bg-blue rotate-r">
-        <div class="message">
-          Best wishes on this wonderful journey, as you build your new lives together.
-        </div>
-        <div class="name">Nguyen</div>
-      </div>
-    </div>
-  </div>
+  <div id="content" class="mv5"></div>
 </div>
 
 <script id="guestentry-template" type="text/x-handlebars-template">
-  <div class="entry">
-    <div class="cf">
-      <div class="fl">
-        <div class="cf">
-          <div class="fl mr3 w2 h2 bg-white"></div>
-          <div class="fr bubble-left wechat">
-            {{Message}}
-          </div>
-        </div>
-      </div>
+    <div class="card entry">
+      <div class="message">{{Message}}</div>
+      <div class="name">{{Name}}</div>
     </div>
-  </div>
 </script>
 
 <script>
