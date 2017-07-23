@@ -1,0 +1,31 @@
+<div class="bg-navy fixed left-0 bottom-0 w-100">
+  <div class="mw6 center">
+    <div id="nav" class="dn">
+      <%= render partial: "partials/nav" %>
+    </div>
+
+    <div class="bt b--white-10 tc">
+      <div id="close" class="dn pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="none" stroke="currentcolor" stroke-width="1" style="display: inline-block; vertical-align: middle; overflow: visible; margin: 16px;"><path d="M1.0606601717798212 1.0606601717798212 L14.939339828220179 14.939339828220179"></path><path d="M14.939339828220179 1.0606601717798212 L1.0606601717798212 14.939339828220179"></path></svg>
+      </div>
+
+      <div id="open" class="db pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="none" stroke="currentcolor" stroke-width="1" style="display: inline-block; vertical-align: middle; overflow: visible; margin: 16px;"><path d="M0 2.5 L16 2.5"></path><path d="M0 8 L16 8"></path><path d="M0 13.5 L16 13.5"></path></svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $("#open").click(function() {
+    $("#close").toggleClass("db dn");
+    $("#open").toggleClass("dn db");
+    $("#nav").toggleClass("db dn");
+  });
+
+  $("#close").click(function() {
+    $("#open").toggleClass("db dn");
+    $("#close").toggleClass("dn db");
+    $("#nav").toggleClass("dn db");
+  });
+</script>
