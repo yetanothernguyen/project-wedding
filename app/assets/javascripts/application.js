@@ -21,5 +21,13 @@
 //= require_tree .
 
 $(function() {
-  $('a[href*="#"]').smoothScroll();
+  readyScript();
 });
+
+$(document).on('turbolinks:load', function() {
+  readyScript();
+});
+
+function readyScript() {
+  $('a[href*="#"]').smoothScroll();
+}
