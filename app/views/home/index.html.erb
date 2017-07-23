@@ -11,7 +11,6 @@
       Join them on 17.11.17 in cyberspace, where they’ll commune in love and embrace.
     </p>
 
-
     <%= render partial: "partials/chevron" %>
   </div>
 </div>
@@ -21,76 +20,5 @@
 </div>
 
 <div class="mw6 cf sans-serif center mb5">
-  <ul class="list pl0 f6">
-    <li class="fl w-50 br bb b--white-20">
-      <%= link_to timeline_path, class: "nav-link" do %>
-        <div class="self-center">
-          <div class="w2 h2 center mv2">
-            <svg class="js-geomicon geomicon" data-icon="list" viewBox="0 0 32 32" style="fill:currentcolor"><title>list icon</title><path d="M3 8 A3 3 0 0 0 9 8 A3 3 0 0 0 3 8 M12 6 L28 6 L28 10 L12 10z M3 16 A3 3 0 0 0 9 16 A3 3 0 0 0 3 16 M12 14 L28 14 L28 18 L12 18z M3 24 A3 3 0 0 0 9 24 A3 3 0 0 0 3 24 M12 22 L28 22 L28 26 L12 26z"></path></svg>
-          </div>
-          <div>Timeline</div>
-        </div>
-      <% end %>
-    </li>
-    <li class="fl w-50 bb b--white-20">
-      <%= link_to speeches_path, class: "nav-link" do %>
-        <div class="self-center">
-          <div class="w2 h2 center mv2">
-            <svg class="js-geomicon geomicon" data-icon="chat" viewBox="0 0 32 32" style="fill:currentcolor"><title>chat icon</title><path d="M32 16 A16 12 0 0 0 0 16 A16 12 0 0 0 16 28 L18 28 C20 30 24 32 28 32 C27 31 26 28 26 25.375 L26 25.375 A16 12 0 0 0 32 16"></path></svg>
-          </div>
-          <div>Speeches</div>
-        </div>
-      <% end %>
-    </li>
-    <li class="fl w-50 br bb b--white-20">
-      <%= link_to gift_registry_path, class: "nav-link" do %>
-        <div class="self-center">
-          <div class="w2 h2 center mv2">
-            <svg class="js-geomicon geomicon" data-icon="bookmark" viewBox="0 0 32 32" style="fill:currentcolor"><title>bookmark icon</title><path d="M6 2 L26 2 L26 30 L16 24 L6 30 Z"></path></svg>
-          </div>
-          <div>Gift Registry</div>
-        </div>
-      <% end %>
-    </li>
-    <li class="fl w-50 bb b--white-20">
-      <%= link_to story_path, class: "nav-link" do %>
-        <div class="self-center">
-          <div class="w2 h2 center mv2">
-            <svg class="js-geomicon geomicon" data-icon="heart" viewBox="0 0 32 32" style="fill:currentcolor"><title>heart icon</title><path d="M0 10 C0 6, 3 2, 8 2 C12 2, 15 5, 16 6 C17 5, 20 2, 24 2 C30 2, 32 6, 32 10 C32 18, 18 29, 16 30 C14 29, 0 18, 0 10"></path></svg>
-          </div>
-          <div>Story</div>
-        </div>
-      <% end %>
-    </li>
-    <li class="fl w-50 br b--white-20">
-      <%= link_to guestbook_path, class: "nav-link" do %>
-        <div class="self-center">
-          <div class="w2 h2 center mv2">
-            <svg class="js-geomicon geomicon" data-icon="file" viewBox="0 0 32 32" style="fill:currentcolor"><title>file icon</title><path d="M4 2 L4 30 L28 30 L28 10 L20 2 z"></path></svg>
-          </div>
-          <div>Guestbook</div>
-        </div>
-      <% end %>
-    </li>
-    <li class="fl w-50 b--white-20">
-      <%= link_to table_seating_path, class: "nav-link" do %>
-        <div class="self-center">
-          <div class="w2 h2 center mv2">
-            <svg class="js-geomicon geomicon" data-icon="grid" viewBox="0 0 32 32" style="fill:currentcolor"><title>grid icon</title><path d="M2 2 L10 2 L10 10 L2 10z M12 2 L20 2 L20 10 L12 10z M22 2 L30 2 L30 10 L22 10z M2 12 L10 12 L10 20 L2 20z M12 12 L20 12 L20 20 L12 20z M22 12 L30 12 L30 20 L22 20z M2 22 L10 22 L10 30 L2 30z M12 22 L20 22 L20 30 L12 30z M22 22 L30 22 L30 30 L22 30z"></path></svg>
-          </div>
-          <div>Table Seating</div>
-        </div>
-      <% end %>
-    </li>
-    <li class="fl w-100 bt b--white-20 tc">
-      <%= link_to root_path, class: "nav-link flex" do %>
-        <div class="self-center">
-          <div class="w2 h2 center mv2">
-            <svg class="js-geomicon geomicon" data-icon="home" viewBox="0 0 32 32" style="fill:currentcolor"><title>home icon</title><path d="M16 0 L32 16 L28 16 L28 30 L20 30 L20 20 L12 20 L12 30 L4 30 L4 16 L0 16 Z"></path></svg>
-          </div>
-          <div>Home</div>
-        </div>
-      <% end %>
-    </li>
-  </ul>
+  <%= render partial: "partials/nav" %>
 </div>
