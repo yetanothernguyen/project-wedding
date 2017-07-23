@@ -191,6 +191,8 @@ GEM
     rails-assets-awesomplete (1.1.2)
     rails-assets-handlebars (4.0.10)
     rails-assets-jquery (3.2.1)
+    rails-assets-jquery-smooth-scroll (2.2.0)
+      rails-assets-jquery (>= 1.7.0)
     rails-assets-tabletop (1.5.2)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
@@ -305,6 +307,7 @@ DEPENDENCIES
   rails-assets-awesomplete!
   rails-assets-handlebars!
   rails-assets-jquery!
+  rails-assets-jquery-smooth-scroll!
   rails-assets-tabletop!
   sass-rails (~> 5.0)
   selenium-webdriver

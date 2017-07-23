@@ -72,4 +72,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-handlebars'
   gem 'rails-assets-jquery'
   gem 'rails-assets-awesomplete'
+  gem 'rails-assets-jquery-smooth-scroll'
 end
