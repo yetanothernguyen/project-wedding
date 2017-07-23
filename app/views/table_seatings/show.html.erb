@@ -1,18 +1,39 @@
-<input id="guest-list-search" />
+<div class="vh-100-ns mw6 center flex justify-center">
+  <div class="self-center">
+    <h2 class="georgia sans-serif mv4 f1 f-subheadline-ns normal lh-title">Table Seating</h2>
 
-<div id="table-guest-list-container">
-  <ol id="table-guest-list">
-  </ol>
+    <p class="f6 f5-ns lh-copy">
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+    </p>
+
+    <%= render partial: "partials/chevron" %>
+  </div>
 </div>
 
-<div id="guest-list-container">
-  <ul id="guest-list">
-    <% @guests.each do |guest| %>
-      <li><%= guest.name %></li>
-    <% end %>
-  </ul>
-</div>
 
+<div id="scroll-to" class="mw6 center pv5 mt5 bt b--white-20">
+  <input id="guest-list-search" class="search w-100" placeholder="Search..."/>
+
+  <div id="table-guest-list-container">
+    <ol id="table-guest-list" class="pl0">
+    </ol>
+  </div>
+
+  <div id="guest-list-container">
+    <ul id="guest-list" class="pl0">
+      <li class="pv4 dt dt--fixed w-100 bb b--white-10">
+        <div class="dtc w-100 b">Guests</div>
+        <!-- <div class="dtc w-20 b tc">Table</div> -->
+      </li>
+      <% @guests.each do |guest| %>
+        <li class="pv3 dt dt--fixed w-100 bb b--white-10">
+          <div class="dtc w-100 f6"><%= guest.name %></div>
+          <!-- <div class="dtc w-20 f6 tc"><%= guest.table %></div> -->
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 <script>
   var guests = <%= raw @guest_tables.to_json %>;
   var guest_by_table = <%= raw @guests_by_table.to_json %>;
@@ -30,8 +51,12 @@
 
       $("#table-guest-list").html("");
       table_guests.forEach(function(guest) {
-        $("#table-guest-list").append("<li>" + guest.name + "</li>");
+        $("#table-guest-list").append("<li class='pv3 dt dt--fixed w-100 bb b--white-10'>" + guest.name + "</li>");
       });
     });
   });
+</script>
+
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
 </script>

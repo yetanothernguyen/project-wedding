@@ -7,10 +7,14 @@
 
     <%= stylesheet_link_tag 'https://unpkg.com/tachyons@4.7.4/css/tachyons.min.css' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
   </head>
 
   <body class="sans-serif bg-navy white ph4">
     <%= yield %>
   </body>
+  <!-- script tag for SmoothScroll -->
+  <script>
+  	var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
 </html>
