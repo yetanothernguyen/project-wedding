@@ -7,7 +7,7 @@ class GuestbookEntry
   attribute :created_at, DateTime
 
   def self.fetch
-    session = GoogleDrive::Session.from_service_account_key(Rails.root.join("config", "service-account.json"))
+    session = GoogleDrive::Session.from_service_account_key(StringIO.new(ENV["GOOGLE_SERVICE_ACCOUNT"]))
     spreadsheet = session.spreadsheet_by_key(Settings.google_sheets.guestbook)
     guests = Rails.cache.fetch([Rails.env, spreadsheet.id, spreadsheet.version]) do
       worksheet = spreadsheet.worksheets[0]
@@ -19,7 +19,7 @@ class GuestbookEntry
   end
 
   def self.create(first_name, last_name, message)
-    session = GoogleDrive::Session.from_service_account_key(Rails.root.join("config", "service-account.json"))
+    session = GoogleDrive::Session.from_service_account_key(StringIO.new(ENV["GOOGLE_SERVICE_ACCOUNT"]))
     worksheet = session.spreadsheet_by_key(Settings.google_sheets.guestbook).worksheets[0]
     num_rows = worksheet.num_rows
     worksheet[num_rows + 1, 1] = first_name

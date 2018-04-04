@@ -5,7 +5,7 @@ class Guest
   attribute :table, Integer
 
   def self.fetch
-    session = GoogleDrive::Session.from_service_account_key(Rails.root.join("config", "service-account.json"))
+    session = GoogleDrive::Session.from_service_account_key(StringIO.new(ENV["GOOGLE_SERVICE_ACCOUNT"]))
     spreadsheet = session.spreadsheet_by_key(Settings.google_sheets.guest_list)
     guests = Rails.cache.fetch([Rails.env, spreadsheet.id, spreadsheet.version]) do
       worksheet = spreadsheet.worksheets[0]
