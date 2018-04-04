@@ -14,3 +14,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .sans-serif {
+  font-family: 'Vollkorn', serif;
+}
